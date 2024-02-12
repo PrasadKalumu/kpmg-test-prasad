@@ -1,0 +1,2 @@
+$imds = ssh -i C:\\Users\\User/.ssh/id_rsa admin@172.214.68.12 curl -s -H Metadata:true --noproxy "*" "http://169.254.169.254/metadata/instance?api-version=2021-02-01"   
+$imds | ConvertFrom-Json | ConvertTo-Json  -Depth 6
